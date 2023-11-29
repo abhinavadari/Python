@@ -1,0 +1,26 @@
+"Write a function to find the longest common prefix string amongst an array of strings"
+class Solution:
+    def longestCommonPrefix(self, strs: List[str]) -> str:
+        ref = ""
+        shortlen = len(min(strs, key=len))
+        strs.sort()
+        for i in range(shortlen):
+            if strs[0][i] == strs[-1][i]:
+                ref += strs[0][i]
+            else:
+                break
+        return ref
+"Time Complexity: O(n) Space Complexity: O(1)
+"
+class Solution:
+    def longestCommonPrefix(self, strs: List[str]) -> str:
+        ref = ""
+        strs = sorted(strs)
+        first = strs[0]
+        last = strs[-1]
+        for i in range(min(len(first),len(last))):
+            if (first[i] != last[i]):
+                return ref
+            ref += first[i]
+        return ref 
+"
