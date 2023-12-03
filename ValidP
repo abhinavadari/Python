@@ -12,9 +12,9 @@ class Solution(object):
             if c in '([{':
                 plist.append(c) 
             else: 
-                if not plist or \
-                    (c == ')' and plist[-1] != '(') or \
-                    (c == '}' and plist[-1] != '{') or \
+                if not plist or 
+                    (c == ')' and plist[-1] != '(') or 
+                    (c == '}' and plist[-1] != '{') or 
                     (c == ']' and plist[-1] != '['):
                     return False 
                 plist.pop() 
