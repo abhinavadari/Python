@@ -18,7 +18,7 @@ class Solution(object):
                     (c == ']' and plist[-1] != '['):
                     return False 
                 plist.pop() 
-        return not plist
+        return len(plist) == 0
 "
 class Solution(object):
     def isValid(self, s):
