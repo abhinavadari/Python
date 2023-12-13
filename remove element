@@ -1,0 +1,11 @@
+"Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The order of the elements may be changed. Then return the number of elements in nums which are not equal to val. 0 <= nums[i] <= 50"
+class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        count = 0
+        for i in range(len(nums)):
+            if nums[i] == val:
+                nums[i] = 51
+                count += 1
+        nums.sort()
+        return len(nums) - count
+"time complexity: nlog(n) space complexity: n"
